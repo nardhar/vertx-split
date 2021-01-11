@@ -1,0 +1,7 @@
+{
+    "api.version": "1.0.0",
+    "http.port": 9000,
+    "mongodb_uri": "mongodb://localhost:27017/vertx-split",
+    "elasticsearch_uri": "http://localhost:9200",
+    "rabbitmq_uri": "amqp://localhost:5672"
+}

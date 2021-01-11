@@ -1,0 +1,3 @@
+include 'app', 'domain-handler', 'domain-verticle', 'main', 'util', 'vertx', 'vertx-verticle'
+
+rootProject.name = "vertx-split"

@@ -1,0 +1,11 @@
+applications:
+- path: _JAR_PATH_
+  memory: 650M
+  instances: 1
+  name: f1nder-api
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git#v4.12
+  from_environment: true
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+    JAVA_OPTS: '-Dhttp.port=$PORT -Dmongodb_uri=_MONGODB_URI_ -Delasticsearch_uri=_ELASTIC_URI_ -Drabbitmq_uri=_RABBIT_URI_'
+    JBP_CONFIG_JAVA_MAIN: '{arguments: -APP_VERSION=_APP_VERSION_}'
